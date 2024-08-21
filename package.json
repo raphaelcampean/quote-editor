@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+    "build:css": "yarn sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  },
+  "name": "quote-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Raphael Campean <raphaelcampean76@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@hotwired/turbo-rails": "hotwired/turbo-rails",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.23.1",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.8",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,9 @@
+#!/bin/sh
+# Script para iniciar os processos de desenvolvimento com foreman
+
+if ! command -v foreman > /dev/null; then
+  echo "Foreman não está instalado. Por favor, instale-o com 'gem install foreman'."
+  exit 1
+fi
+
+foreman start -f Procfile.dev
